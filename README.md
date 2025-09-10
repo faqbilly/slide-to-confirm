@@ -8,6 +8,8 @@
 
 A highly customizable, production-ready slide-to-confirm button component for iOS apps built with SwiftUI. This component provides a smooth, accessible, and performant user experience for critical actions that require user confirmation.
 
+![Slide to Confirm Demo](slide-to-confirm.gif)
+
 ## ✨ Features
 
 - 🎯 **Five Distinct States**: Disabled Start, Enabled Start, Enabled Sliding, Enabled End, Disabled Triggered
@@ -24,7 +26,7 @@ A highly customizable, production-ready slide-to-confirm button component for iO
 
 - **Bilal Aurangzeb** (billy) - Developer
 - **Email**: fbilal@proton.me
-- **Produly, Made in Pakistan** 🇵🇰
+- **Proudly, Made in Pakistan** 🇵🇰
 
 ## License
 
