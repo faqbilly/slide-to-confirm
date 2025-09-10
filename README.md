@@ -12,7 +12,7 @@ A highly customizable, production-ready slide-to-confirm button component for iO
 
 - 🎯 **Five Distinct States**: Disabled Start, Enabled Start, Enabled Sliding, Enabled End, Disabled Triggered
 - 🎨 **Highly Customizable**: Themes, configurations, and styling options
-- ♿ **Accessibility First**: Full VoiceOver support and accessibility features
+- ♿ **Accessibility First**: Full VoiceOver support and accessibility features including RTL
 - 🚀 **Performance Optimized**: Efficient state management and smooth animations
 - 🔧 **Easy Integration**: Simple API with manager pattern for complex scenarios
 - 📱 **Responsive Design**: Adapts to different screen sizes and orientations
@@ -318,6 +318,7 @@ The component provides comprehensive accessibility support:
 - **Accessibility Traits**: Proper button and selected states
 - **Accessibility Hints**: Contextual instructions for each state
 - **Accessibility Labels**: Clear descriptions of current state
+- **RTL Support**: Right-to-Left support 
 
 ## Performance Considerations
 

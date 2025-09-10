@@ -41,6 +41,9 @@ struct SlideButtonExamples: View {
                     
                     // Multiple Buttons
                     multipleButtonsExample
+                    
+                    // RTL Examples
+                    rtlExamples
                 }
                 .padding()
             }
@@ -144,6 +147,41 @@ struct SlideButtonExamples: View {
                 SlideToConfirmButton(
                     configuration: .compact,
                     primaryText: "Action 3",
+                    isEnabled: false
+                )
+            }
+            .padding(.horizontal)
+        }
+    }
+    
+    // MARK: - RTL Examples
+    private var rtlExamples: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("RTL (Arabic) Examples")
+                .font(.headline)
+            
+            VStack(spacing: 16) {
+                SlideToConfirmButton(
+                    configuration: .rtl,
+                    theme: .rtl,
+                    primaryText: "انقر للتأكيد",
+                    instructionText: "اسحب للتأكيد",
+                    isEnabled: true
+                )
+                
+                SlideToConfirmButton(
+                    configuration: .rtlCompact,
+                    theme: .rtlDark,
+                    primaryText: "حذف الحساب",
+                    instructionText: "اسحب للحذف",
+                    isEnabled: true
+                )
+                
+                SlideToConfirmButton(
+                    configuration: .rtlLarge,
+                    theme: .rtl,
+                    primaryText: "شراء المنتج",
+                    instructionText: "اسحب للشراء",
                     isEnabled: false
                 )
             }

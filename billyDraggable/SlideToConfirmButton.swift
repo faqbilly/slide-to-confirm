@@ -49,6 +49,21 @@ public enum SlideButtonState: Equatable, CaseIterable {
     }
 }
 
+// MARK: - Language Direction
+@frozen
+public enum LanguageDirection: CaseIterable {
+    case leftToRight
+    case rightToLeft
+    
+    public var isRTL: Bool {
+        self == .rightToLeft
+    }
+    
+    public var isLTR: Bool {
+        self == .leftToRight
+    }
+}
+
 // MARK: - Slide Button Configuration
 public struct SlideButtonConfiguration {
     // MARK: - Layout
@@ -71,6 +86,9 @@ public struct SlideButtonConfiguration {
     public let shadowRadius: CGFloat
     public let shadowOffset: CGFloat
     
+    // MARK: - Direction
+    public let languageDirection: LanguageDirection
+    
     // MARK: - Initialization
     public init(
         height: CGFloat = 56,
@@ -84,7 +102,8 @@ public struct SlideButtonConfiguration {
         resetDelay: Double = 2.0,
         cornerRadius: CGFloat = 28,
         shadowRadius: CGFloat = 4,
-        shadowOffset: CGFloat = 2
+        shadowOffset: CGFloat = 2,
+        languageDirection: LanguageDirection = .leftToRight
     ) {
         self.height = height
         self.horizontalPadding = horizontalPadding
@@ -98,6 +117,7 @@ public struct SlideButtonConfiguration {
         self.cornerRadius = cornerRadius
         self.shadowRadius = shadowRadius
         self.shadowOffset = shadowOffset
+        self.languageDirection = languageDirection
     }
     
     // MARK: - Presets
@@ -113,6 +133,24 @@ public struct SlideButtonConfiguration {
         height: 64,
         handleSize: 56,
         nudgeOffset: 10
+    )
+    
+    public static let rtl = SlideButtonConfiguration(
+        languageDirection: .rightToLeft
+    )
+    
+    public static let rtlCompact = SlideButtonConfiguration(
+        height: 44,
+        handleSize: 36,
+        nudgeOffset: 6,
+        languageDirection: .rightToLeft
+    )
+    
+    public static let rtlLarge = SlideButtonConfiguration(
+        height: 64,
+        handleSize: 56,
+        nudgeOffset: 10,
+        languageDirection: .rightToLeft
     )
 }
 
@@ -144,6 +182,9 @@ public struct SlideButtonTheme {
     public let secondaryTextFont: Font
     public let handleIconFont: Font
     
+    // MARK: - Direction
+    public let languageDirection: LanguageDirection
+    
     // MARK: - Initialization
     public init(
         disabledStartBackground: Color = Color(red: 0.98, green: 0.95, blue: 0.8),
@@ -163,7 +204,8 @@ public struct SlideButtonTheme {
         enabledHandleIcon: Color = Color(red: 1.0, green: 0.9, blue: 0.0),
         primaryTextFont: Font = .system(size: 16, weight: .medium, design: .default),
         secondaryTextFont: Font = .system(size: 12, weight: .regular, design: .default),
-        handleIconFont: Font = .system(size: 20, weight: .semibold, design: .default)
+        handleIconFont: Font = .system(size: 20, weight: .semibold, design: .default),
+        languageDirection: LanguageDirection = .leftToRight
     ) {
         self.disabledStartBackground = disabledStartBackground
         self.enabledStartBackground = enabledStartBackground
@@ -183,6 +225,7 @@ public struct SlideButtonTheme {
         self.primaryTextFont = primaryTextFont
         self.secondaryTextFont = secondaryTextFont
         self.handleIconFont = handleIconFont
+        self.languageDirection = languageDirection
     }
     
     // MARK: - Presets
@@ -198,6 +241,23 @@ public struct SlideButtonTheme {
         enabledText: Color.white,
         disabledStartSecondaryText: Color.gray,
         enabledSecondaryText: Color(red: 0.8, green: 0.8, blue: 0.8)
+    )
+    
+    public static let rtl = SlideButtonTheme(
+        languageDirection: .rightToLeft
+    )
+    
+    public static let rtlDark = SlideButtonTheme(
+        disabledStartBackground: Color(red: 0.2, green: 0.2, blue: 0.2),
+        enabledStartBackground: Color(red: 0.3, green: 0.3, blue: 0.3),
+        enabledSlidingBackground: Color(red: 0.3, green: 0.3, blue: 0.3),
+        enabledEndBackground: Color(red: 0.4, green: 0.2, blue: 0.0),
+        disabledTriggeredBackground: Color(red: 0.3, green: 0.3, blue: 0.3),
+        disabledStartText: Color.gray,
+        enabledText: Color.white,
+        disabledStartSecondaryText: Color.gray,
+        enabledSecondaryText: Color(red: 0.8, green: 0.8, blue: 0.8),
+        languageDirection: .rightToLeft
     )
 }
 
@@ -228,6 +288,11 @@ public struct SlideToConfirmButton: View {
     private let instructionText: String
     private let handleIcon: String
     private let checkmarkIcon: String
+    
+    // MARK: - Computed Properties
+    private var isRTL: Bool {
+        config.languageDirection.isRTL || theme.languageDirection.isRTL
+    }
     
     // MARK: - Callbacks
     private let onComplete: (() -> Void)?
@@ -266,7 +331,7 @@ public struct SlideToConfirmButton: View {
         GeometryReader { geometry in
             let maxOffset = geometry.size.width - config.handleSize - (config.horizontalPadding * 2)
             
-            ZStack(alignment: .leading) {
+            ZStack {
                 // Background Track
                 backgroundTrack
                 
@@ -275,7 +340,8 @@ public struct SlideToConfirmButton: View {
                 
                 // Draggable Handle
                 handle
-                    .offset(x: config.horizontalPadding + offset + nudgeOffset)
+                    .position(x: handleOffset(for: geometry, maxOffset: maxOffset) + config.handleSize / 2, 
+                             y: config.height / 2)
                     .gesture(handleGesture(maxOffset: maxOffset))
             }
         }
@@ -365,7 +431,8 @@ public struct SlideToConfirmButton: View {
         guard currentState.isInteractive else { return }
         
         let translation = value.translation.width
-        let newOffset = min(max(0, translation), maxOffset)
+        let adjustedTranslation = isRTL ? -translation : translation
+        let newOffset = min(max(0, adjustedTranslation), maxOffset)
         
         // Update offset directly without any animation
         offset = newOffset
@@ -457,6 +524,21 @@ public struct SlideToConfirmButton: View {
         delegate?.slideButtonDidStartDragging(self)
     }
     
+    // MARK: - Helper Methods
+    private func handleOffset(for geometry: GeometryProxy, maxOffset: CGFloat) -> CGFloat {
+        let calculatedOffset: CGFloat
+        if isRTL {
+            // In RTL, handle starts from right and moves left as offset increases
+            calculatedOffset = geometry.size.width - config.horizontalPadding - config.handleSize - offset - nudgeOffset
+        } else {
+            // In LTR, handle starts from left and moves right as offset increases
+            calculatedOffset = config.horizontalPadding + offset + nudgeOffset
+        }
+        
+        
+        return calculatedOffset
+    }
+    
     // MARK: - Computed Properties
     private var backgroundColor: Color {
         switch currentState {
@@ -534,7 +616,7 @@ public struct SlideToConfirmButton: View {
         case .disabledStart, .enabledStart, .enabledSliding:
             return instructionText
         case .enabledEnd:
-            return "release to confirm"
+            return isRTL ? "الافراج للتأكيد" : "release to confirm"
         case .disabledTriggered:
             return ""
         }
@@ -543,7 +625,7 @@ public struct SlideToConfirmButton: View {
     private var currentHandleIcon: String {
         switch currentState {
         case .disabledStart, .enabledStart, .enabledSliding:
-            return handleIcon
+            return isRTL ? "chevron.left.2" : handleIcon
         case .enabledEnd, .disabledTriggered:
             return checkmarkIcon
         }
@@ -578,9 +660,13 @@ public struct SlideToConfirmButton: View {
         case .disabledStart:
             return "Button is currently disabled"
         case .enabledStart:
-            return "Drag the handle to the right to confirm your action"
+            return isRTL ? 
+                "Drag the handle to the left to confirm your action" :
+                "Drag the handle to the right to confirm your action"
         case .enabledSliding:
-            return "Continue dragging to the right to confirm"
+            return isRTL ?
+                "Continue dragging to the left to confirm" :
+                "Continue dragging to the right to confirm"
         case .enabledEnd:
             return "Release to confirm your action"
         case .disabledTriggered:
@@ -625,9 +711,11 @@ struct SlideToConfirmButton_Previews: PreviewProvider {
             .padding()
             
             SlideToConfirmButton(
-                configuration: .compact,
-                theme: .dark,
-                isEnabled: false
+                configuration: .rtl,
+                theme: .rtl,
+                primaryText: "انقر للتأكيد",
+                instructionText: "اسحب للتأكيد",
+                isEnabled: true
             )
             .padding()
         }

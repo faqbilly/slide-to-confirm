@@ -30,6 +30,7 @@ public final class SlideButtonManager: ObservableObject {
     @Published public var currentState: SlideButtonState = .disabledStart
     @Published public var isHolding: Bool = false
     @Published public var nudgeOffset: CGFloat = 0
+    @Published public var languageDirection: LanguageDirection = .leftToRight
     
     // MARK: - Private Properties
     private var cancellables = Set<AnyCancellable>()
@@ -50,6 +51,14 @@ public final class SlideButtonManager: ObservableObject {
     // MARK: - Public Methods
     public func setEnabled(_ enabled: Bool) {
         isEnabled = enabled
+    }
+    
+    public func setLanguageDirection(_ direction: LanguageDirection) {
+        languageDirection = direction
+    }
+    
+    public func setRTL(_ rtl: Bool) {
+        languageDirection = rtl ? .rightToLeft : .leftToRight
     }
     
     public func reset() {

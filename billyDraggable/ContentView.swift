@@ -25,6 +25,7 @@ struct ContentView: View {
     // MARK: - State Properties
     @StateObject private var manager = SlideButtonManager()
     @State private var showWelcomeMessage = false
+    @State private var isRTL = false
     
     // MARK: - Initialization
     init() {
@@ -48,14 +49,17 @@ struct ContentView: View {
             // Title Section
             titleSection
             
+            // RTL Toggle
+            rtlToggleSection
+            
             Spacer()
             
             // Slide Button with adaptive padding
             SlideToConfirmButton(
-                configuration: .default,
-                theme: .default,
-                primaryText: "CTA Text Here",
-                instructionText: "slide to confirm",
+                configuration: isRTL ? .rtl : .default,
+                theme: isRTL ? .rtl : .default,
+                primaryText: isRTL ? "شراء الذهب": "Buy Gold",
+                instructionText: isRTL ? "اسحب للتأكيد" : "slide to confirm",
                 isEnabled: manager.isEnabled,
                 onComplete: handleSlideCompletion,
                 onStateChange: manager.handleStateChange,
@@ -94,15 +98,37 @@ struct ContentView: View {
         }
     }
     
+    private var rtlToggleSection: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Language Direction:")
+                    .font(.headline)
+                
+                Spacer()
+                
+                Toggle("", isOn: $isRTL)
+                    .labelsHidden()
+                    .onChange(of: isRTL) { _, newValue in
+                        manager.setRTL(newValue)
+                    }
+            }
+            .padding(.horizontal, horizontalPadding)
+            
+            Text(isRTL ? "Arabic (RTL) Mode" : "English (LTR) Mode")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+        }
+    }
+    
     
     private var welcomeMessage: some View {
         Group {
             if showWelcomeMessage {
-                Text("Action Completed Successfully!")
+                Text(isRTL ? "تم إكمال الإجراء بنجاح!" : "Action Completed Successfully!")
                     .font(.headline)
                     .foregroundColor(.green)
                     .transition(.scale.combined(with: .opacity))
-                    .accessibilityLabel("Action completed successfully")
+                    .accessibilityLabel(isRTL ? "تم إكمال الإجراء بنجاح" : "Action completed successfully")
             }
         }
     }
