@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		28DAA1592E6815080082E2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28DAA1402E6815070082E2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28DAA1472E6815070082E2FC;
+			remoteInfo = billyDraggable;
+		};
+		28DAA1632E6815080082E2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28DAA1402E6815070082E2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28DAA1472E6815070082E2FC;
+			remoteInfo = billyDraggable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28DAA1482E6815070082E2FC /* billyDraggable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = billyDraggable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DAA1582E6815080082E2FC /* billyDraggableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = billyDraggableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DAA1622E6815080082E2FC /* billyDraggableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = billyDraggableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		28DAA14A2E6815070082E2FC /* billyDraggable */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = billyDraggable;
+			sourceTree = "<group>";
+		};
+		28DAA15B2E6815080082E2FC /* billyDraggableTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = billyDraggableTests;
+			sourceTree = "<group>";
+		};
+		28DAA1652E6815080082E2FC /* billyDraggableUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = billyDraggableUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28DAA1452E6815070082E2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA1552E6815080082E2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA15F2E6815080082E2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28DAA13F2E6815070082E2FC = {
+			isa = PBXGroup;
+			children = (
+				28DAA14A2E6815070082E2FC /* billyDraggable */,
+				28DAA15B2E6815080082E2FC /* billyDraggableTests */,
+				28DAA1652E6815080082E2FC /* billyDraggableUITests */,
+				28DAA1492E6815070082E2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28DAA1492E6815070082E2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28DAA1482E6815070082E2FC /* billyDraggable.app */,
+				28DAA1582E6815080082E2FC /* billyDraggableTests.xctest */,
+				28DAA1622E6815080082E2FC /* billyDraggableUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28DAA1472E6815070082E2FC /* billyDraggable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DAA16C2E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggable" */;
+			buildPhases = (
+				28DAA1442E6815070082E2FC /* Sources */,
+				28DAA1452E6815070082E2FC /* Frameworks */,
+				28DAA1462E6815070082E2FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				28DAA14A2E6815070082E2FC /* billyDraggable */,
+			);
+			name = billyDraggable;
+			packageProductDependencies = (
+			);
+			productName = billyDraggable;
+			productReference = 28DAA1482E6815070082E2FC /* billyDraggable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28DAA1572E6815080082E2FC /* billyDraggableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DAA16F2E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggableTests" */;
+			buildPhases = (
+				28DAA1542E6815080082E2FC /* Sources */,
+				28DAA1552E6815080082E2FC /* Frameworks */,
+				28DAA1562E6815080082E2FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DAA15A2E6815080082E2FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				28DAA15B2E6815080082E2FC /* billyDraggableTests */,
+			);
+			name = billyDraggableTests;
+			packageProductDependencies = (
+			);
+			productName = billyDraggableTests;
+			productReference = 28DAA1582E6815080082E2FC /* billyDraggableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28DAA1612E6815080082E2FC /* billyDraggableUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DAA1722E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggableUITests" */;
+			buildPhases = (
+				28DAA15E2E6815080082E2FC /* Sources */,
+				28DAA15F2E6815080082E2FC /* Frameworks */,
+				28DAA1602E6815080082E2FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DAA1642E6815080082E2FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				28DAA1652E6815080082E2FC /* billyDraggableUITests */,
+			);
+			name = billyDraggableUITests;
+			packageProductDependencies = (
+			);
+			productName = billyDraggableUITests;
+			productReference = 28DAA1622E6815080082E2FC /* billyDraggableUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28DAA1402E6815070082E2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					28DAA1472E6815070082E2FC = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					28DAA1572E6815080082E2FC = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 28DAA1472E6815070082E2FC;
+					};
+					28DAA1612E6815080082E2FC = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 28DAA1472E6815070082E2FC;
+					};
+				};
+			};
+			buildConfigurationList = 28DAA1432E6815070082E2FC /* Build configuration list for PBXProject "billyDraggable" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28DAA13F2E6815070082E2FC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 28DAA1492E6815070082E2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28DAA1472E6815070082E2FC /* billyDraggable */,
+				28DAA1572E6815080082E2FC /* billyDraggableTests */,
+				28DAA1612E6815080082E2FC /* billyDraggableUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28DAA1462E6815070082E2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA1562E6815080082E2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA1602E6815080082E2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28DAA1442E6815070082E2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA1542E6815080082E2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DAA15E2E6815080082E2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28DAA15A2E6815080082E2FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28DAA1472E6815070082E2FC /* billyDraggable */;
+			targetProxy = 28DAA1592E6815080082E2FC /* PBXContainerItemProxy */;
+		};
+		28DAA1642E6815080082E2FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28DAA1472E6815070082E2FC /* billyDraggable */;
+			targetProxy = 28DAA1632E6815080082E2FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28DAA16A2E6815080082E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28DAA16B2E6815080082E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28DAA16D2E6815080082E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"billyDraggable/Preview Content\"";
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28DAA16E2E6815080082E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"billyDraggable/Preview Content\"";
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28DAA1702E6815080082E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/billyDraggable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/billyDraggable";
+			};
+			name = Debug;
+		};
+		28DAA1712E6815080082E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/billyDraggable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/billyDraggable";
+			};
+			name = Release;
+		};
+		28DAA1732E6815080082E2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = billyDraggable;
+			};
+			name = Debug;
+		};
+		28DAA1742E6815080082E2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HFM2WDPRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phiwallet.billyDraggableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = billyDraggable;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28DAA1432E6815070082E2FC /* Build configuration list for PBXProject "billyDraggable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DAA16A2E6815080082E2FC /* Debug */,
+				28DAA16B2E6815080082E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DAA16C2E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DAA16D2E6815080082E2FC /* Debug */,
+				28DAA16E2E6815080082E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DAA16F2E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DAA1702E6815080082E2FC /* Debug */,
+				28DAA1712E6815080082E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DAA1722E6815080082E2FC /* Build configuration list for PBXNativeTarget "billyDraggableUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DAA1732E6815080082E2FC /* Debug */,
+				28DAA1742E6815080082E2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28DAA1402E6815070082E2FC /* Project object */;
+}
